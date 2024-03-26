@@ -1,8 +1,18 @@
 version: "3"
 
 services:
+  app:
+    container_name: "app-dev"
+    build:
+      # context: ..
+      dockerfile: .devcontainer/Dockerfile
+
+  postgresdb:
+    container_name: "postgres-dev"
+    
   # Update this to the name of the service you want to work with in your docker-compose.yml file
   grafana:
+    container_name: "grafana-dev"
     # Uncomment if you want to override the service's Dockerfile to one in the .devcontainer 
     # folder. Note that the path of the Dockerfile and context is relative to the *primary* 
     # docker-compose.yml file (the first in the devcontainer.json "dockerComposeFile"

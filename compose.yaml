@@ -5,8 +5,8 @@ services:
     container_name: "app"
     build:
       dockerfile: Dockerfile
-    volumes:
-      - ..:/workspaces:cached
+    # volumes:
+      # - ..:/workspaces:cached
     depends_on:
       - postgresdb
       - grafana
