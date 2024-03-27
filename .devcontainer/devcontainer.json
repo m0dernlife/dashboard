@@ -12,7 +12,9 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "poetry install",
+	// "postCreateCommand": "git config --file /home/vscode/.gitconfig --remove-section gpg.ssh",
+
+	"postAttachCommand": "git config --file /home/vscode/.gitconfig --remove-section gpg.ssh",
 
 	// Configure tool-specific properties.
 	"customizations": {
